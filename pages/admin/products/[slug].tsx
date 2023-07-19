@@ -153,7 +153,6 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
   }
 
 
-
   return (
     <AdminLayout
       title={'Producto'}
@@ -314,7 +313,7 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
               helperText="Presiona [spacebar] para agregar"
               value={newTagValue}
               onChange={({ target }) => setNewTagValue(target.value)}
-              onKeyUp={({ code }) => code === 'Space' ? onNewTag(newTagValue) : undefined}
+              onKeyUp={({ code }) => code === 'Space' ? onNewTag() : undefined}
             />
 
             <Box sx={{
